@@ -6,8 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="CSEDU-PORTAL-CSE-2112" />
+        <module name="CSEDUPROJECT" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="CSEDUPROJECT" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
