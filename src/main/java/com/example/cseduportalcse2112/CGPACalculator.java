@@ -24,7 +24,8 @@ public class CGPACalculator extends Application {
     private double[] gpa = new double [5];
     private double[] credits = new double[5];
     static double total_credit;
-    static double cgpa;
+    double cgpa;
+
 
 
     @FXML
@@ -85,17 +86,25 @@ public class CGPACalculator extends Application {
 
 
     }
-    public void CgpaCalculator() {
-
-        getCredit();
+    public double getTotal_credit(){
+        total_credit = 0;
         for (int i = 0; i < 5; i++) {
 
             total_credit += credits[i];
         }
+        return total_credit;
+    }
+    public void CgpaCalculator() {
 
+        getCredit();
+        double totalcredit = getTotal_credit();
+        cgpa = (gpa[0] * credits[0] + gpa[1] * credits[1] + gpa[2] * credits[2] + gpa[3] * credits[3] + gpa[4] * credits[4])/totalcredit;
 
-        cgpa = (gpa[0] * credits[0] + gpa[1] * credits[1] + gpa[2] * credits[2] + gpa[3] * credits[3] + gpa[4] * credits[4])/total_credit;
-
+        String Cgpa = String.valueOf(String.format("%.2f",cgpa));
+        cgpacalculated.setText(Cgpa);
+    }
+    public void reset(){
+        cgpa = 0.0;
         String Cgpa = String.valueOf(String.format("%.2f",cgpa));
         cgpacalculated.setText(Cgpa);
     }

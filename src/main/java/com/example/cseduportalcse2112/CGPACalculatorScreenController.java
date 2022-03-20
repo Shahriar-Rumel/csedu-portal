@@ -24,6 +24,7 @@ public class CGPACalculatorScreenController extends CGPACalculator{
 
 
     public void CalculateCgpa(ActionEvent actionEvent) {
+
         String t1 = Textfield1.getText();
         String t2 = Textfield2.getText();
         String t3 = Textfield3.getText();
@@ -45,5 +46,16 @@ public class CGPACalculatorScreenController extends CGPACalculator{
 
 
 
+    }
+
+    public void Reset(ActionEvent actionEvent) {
+        Textfield1.setText(null);
+        Textfield2.setText(null);
+        Textfield3.setText(null);
+        Textfield4.setText(null);
+        Textfield5.setText(null);
+
+        super.MarkToGpaConverter(0,0,0,0,0);
+        super.reset();
     }
 }

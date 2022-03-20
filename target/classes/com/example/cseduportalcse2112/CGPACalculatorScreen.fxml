@@ -211,6 +211,7 @@
                </font>
             </Label>
             <Button layoutX="70.0" layoutY="432.0" mnemonicParsing="false" onAction="#CalculateCgpa" prefHeight="34.0" prefWidth="534.0" style="-fx-font-weight: 700;" styleClass="CGPAScreenCalculatorTItleBox" text="Get Cgpa" textFill="WHITE" />
+            <Button layoutX="464.0" layoutY="526.0" mnemonicParsing="false" onAction="#Reset" style="-fx-font-weight: 700;" styleClass="resetButton" text="Reset" textFill="WHITE" />
          </children>
       </AnchorPane>
    </center>

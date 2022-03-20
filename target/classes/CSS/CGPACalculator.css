@@ -52,3 +52,6 @@
              -fx-font-family:'Cambria';
               -fx-font-weight:500;
 }
+.resetButton{
+     -fx-background-color:#50238A;
+}
